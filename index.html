@@ -6,15 +6,36 @@
 <title>Emotions Heard</title>
 
 <style>
-body { margin:0; font-family:Arial; background:#76af55; padding-top:70px; }
+body { margin:0; font-family:Arial; background:#76af55; padding-top:70px; padding-bottom:70px; }
 header, footer { background:white; padding:12px 20px; display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #203811; position:fixed; width:100%; left:0; }
 header { top:0; }
 footer { bottom:0; border-top:2px solid #203811; }
 .logo-area { display:flex; gap:10px; align-items:center; }
 .logo-area img { width:40px; height:40px; border-radius:50%; }
-.menu { font-size:28px; cursor:pointer; }
-nav { display:none; position:fixed; top:70px; right:0; background:white; width:220px; }
-nav a { display:block; padding:15px; text-decoration:none; color:black; }
+.menu { font-size: 26px;
+  cursor: pointer;
+  padding: 8px;
+  margin-right: 8px; }
+nav {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  background: white;
+  width: 90%;
+  max-width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  z-index: 9999;
+}
+nav a { 
+  display: block;
+  padding: 16px;
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid #eee;
+ }
 section { max-width:900px; margin:auto; padding:20px; padding-bottom:100px; }
 .btn { background:#203811; color:white; padding:12px 18px; border-radius:6px; text-decoration:none; display:inline-block; margin:8px 5px; }
 </style>
@@ -31,8 +52,13 @@ section { max-width:900px; margin:auto; padding:20px; padding-bottom:100px; }
 </header>
 
 <nav id="nav">
-  <a href="index.html">Home</a>
-  <a href="get-involved.html">Get Involved</a>
+ <a href="index.html" onclick="toggleMenu()">Home</a>
+<a href="index.html#about" onclick="toggleMenu()">About Us</a>
+<a href="get-involved.html" onclick="toggleMenu()">Get Involved</a>
+<a href="impact.html" onclick="toggleMenu()">Our Impact</a>
+<a href="index.html#donate" onclick="toggleMenu()">Donate</a>
+<a href="events.html" onclick="toggleMenu()">Events</a>
+<a href="index.html#contact" onclick="toggleMenu()">Contact Us</a>
 </nav>
 
 <section>
