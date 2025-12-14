@@ -6,95 +6,60 @@
 <title>Emotions Heard</title>
 
 <style>
-:root {
-  --matcha:#203811;
-  --gold:#502C18;
-  --light:#76af55;
-  --dark:#040a00;
-}
-body {
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:var(--light);
-  color:var(--dark);
-}
-header {
-  position:fixed;
-  top:0;
-  width:100%;
-  background:white;
-  padding:12px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:2px solid var(--matcha);
-}
-nav a {
-  margin:0 10px;
-  color:var(--matcha);
-  text-decoration:none;
-  font-weight:bold;
-}
-section {
-  padding:100px 20px;
-  max-width:1000px;
-  margin:auto;
-}
-.btn {
-  display:inline-block;
-  padding:12px 18px;
-  background:var(--matcha);
-  color:white;
-  text-decoration:none;
-  border-radius:5px;
-  margin:8px 5px;
-}
-footer {
-  background:white;
-  padding:20px;
-  border-top:2px solid var(--matcha);
-}
+body { margin:0; font-family:Arial; background:#76af55; padding-top:70px; }
+header, footer { background:white; padding:12px 20px; display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid #203811; position:fixed; width:100%; left:0; }
+header { top:0; }
+footer { bottom:0; border-top:2px solid #203811; }
+.logo-area { display:flex; gap:10px; align-items:center; }
+.logo-area img { width:40px; height:40px; border-radius:50%; }
+.menu { font-size:28px; cursor:pointer; }
+nav { display:none; position:fixed; top:70px; right:0; background:white; width:220px; }
+nav a { display:block; padding:15px; text-decoration:none; color:black; }
+section { max-width:900px; margin:auto; padding:20px; padding-bottom:100px; }
+.btn { background:#203811; color:white; padding:12px 18px; border-radius:6px; text-decoration:none; display:inline-block; margin:8px 5px; }
 </style>
 </head>
 
 <body>
 
 <header>
-  <strong>Emotions Heard</strong>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="volunteer.html">Get Involved</a>
-    <a href="impact.html">Impact</a>
-    <a href="events.html">Events</a>
-  </nav>
+  <div class="logo-area">
+    <img src="logo.png">
+    <strong>Emotions Heard</strong>
+  </div>
+  <div class="menu" onclick="toggleMenu()">☰</div>
 </header>
+
+<nav id="nav">
+  <a href="index.html">Home</a>
+  <a href="get-involved.html">Get Involved</a>
+</nav>
 
 <section>
 <h1>Our Mission</h1>
-<p>
-Emotions Heard is a safe space where people express emotions through
-art, writing, and action — without fear of judgment.
-</p>
+<p>A safe space for people to express emotions through art, writing, and action — without judgment.</p>
 
-<a class="btn" href="volunteer.html">Get Involved</a>
-<a class="btn" href="#donate">Donate</a>
-</section>
+<h2>About Us</h2>
+<p>Emotions Heard was created to amplify unheard voices and provide creative outlets for emotional expression.</p>
 
-<section id="donate">
 <h2>Donate</h2>
-<p>Your support helps voices be heard.</p>
-<a class="btn" href="#">GoFundMe</a>
-</section>
+<a class="btn" href="#">Donate Now</a>
 
-<section id="contact">
-<h2>Contact Us</h2>
+<h2>Contact</h2>
 <p>Email: emotionsheard@gmail.com</p>
-<p>Instagram: @emotions_heardd</p>
 </section>
 
 <footer>
-<small>© Emotions Heard</small>
+  <small>© Emotions Heard</small>
+  <a href="https://instagram.com/emotions_heardd" target="_blank">Instagram</a>
 </footer>
+
+<script>
+function toggleMenu(){
+  const nav = document.getElementById("nav");
+  nav.style.display = nav.style.display === "block" ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
